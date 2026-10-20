@@ -1,0 +1,8 @@
+{
+  "name": "V'GO 生活服务",
+  "short_name": "V'GO",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FF6600",
+  "background_color": "#0a0d11"
+}

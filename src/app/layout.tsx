@@ -25,11 +25,11 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "V'GO · 有事不用愁，上门找 V'GO",
+    default: "V'GO · 全马上门服务（吉隆坡 · 槟城 · 新山 · 亚庇）",
     template: "%s · V'GO",
   },
-  description: "V'GO（V Go On）—— 马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
-  keywords: ["VGO", "上门服务", "马来西亚", "沙巴", "亚庇", "Kota Kinabalu", "维修", "清洁", "按摩", "跑腿"],
+  description: "V'GO（V Go On）—— 全马上门服务平台。吉隆坡、雪兰莪、槟城、新山、亚庇等主要城市：按摩、美容、居家清洁、空调清洗、维修与跑腿，线上下单，师傅上门。",
+  keywords: ["VGO", "马来西亚上门服务", "全马上门服务", "吉隆坡家电维修", "吉隆坡按摩", "槟城保洁", "新山维修", "亚庇上门服务", "Kota Kinabalu", "Kuala Lumpur", "Penang", "Johor Bahru", "维修", "清洁", "按摩", "跑腿"],
   authors: [{ name: "Ventus Reflexology" }],
   creator: "Ventus Reflexology",
   publisher: "Ventus Reflexology",
@@ -127,7 +127,7 @@ const jsonLdGraph = {
       image: BASE_URL + "/shared/s01.jpg",
       logo: BASE_URL + "/logo-mark.svg",
       description:
-        "马来西亚沙巴亚庇（Kota Kinabalu）上门生活服务平台：按摩、美容、美发、居家清洁、空调清洗、维修与跑腿。客户线上下单、师傅上门服务、线下扫码付款并由平台审核。",
+        "马来西亚全马上门生活服务平台：按摩、美容、美发、居家清洁、空调清洗、维修与跑腿。覆盖吉隆坡、雪兰莪、槟城、新山、亚庇等城市；线上下单、师傅上门、线下扫码付款由平台审核。",
       email: "support.vgo@gmail.com",
       priceRange: "RM30–RM300",
       currenciesAccepted: "MYR",
@@ -139,11 +139,15 @@ const jsonLdGraph = {
         addressCountry: "MY",
       },
       areaServed: [
+        { "@type": "Country", name: "Malaysia" },
+        { "@type": "City", name: "Kuala Lumpur" },
+        { "@type": "City", name: "Petaling Jaya" },
+        { "@type": "City", name: "George Town" },
+        { "@type": "City", name: "Johor Bahru" },
         { "@type": "City", name: "Kota Kinabalu" },
-        { "@type": "Place", name: "Damai" },
-        { "@type": "Place", name: "Luyang" },
-        { "@type": "Place", name: "Likas" },
+        { "@type": "City", name: "Kuching" },
         { "@type": "AdministrativeArea", name: "Sabah" },
+        { "@type": "AdministrativeArea", name: "Selangor" },
       ],
       openingHoursSpecification: [
         {

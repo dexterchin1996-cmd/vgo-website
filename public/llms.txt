@@ -1,10 +1,10 @@
 # V'GO Services（V Go On）
 
-> 马来西亚沙巴亚庇（Kota Kinabalu）的上门生活服务平台。客户线上下单，师傅上门或到店服务，付款走线下 DuitNow 扫码 + 上传凭证 + 平台人工审核。
+> 马来西亚**全马**上门生活服务平台（13 州 + 3 联邦直辖区）。客户线上下单，师傅上门或到店服务，付款走线下 DuitNow 扫码 + 上传凭证 + 平台人工审核。
 
 ## 是什么
 - 平台名：V'GO / V Go On（运营方：Ventus Reflexology）
-- 覆盖区域：Kota Kinabalu（Damai、Luyang、Likas 一带为主），服务半径逐步扩展
+- 覆盖区域：Kuala Lumpur、Selangor（Petaling Jaya / Subang Jaya / Shah Alam / Klang）、Penang（George Town / Bayan Lepas）、Johor（Johor Bahru）、Sabah（Kota Kinabalu / Sandakan / Tawau）、Sarawak（Kuching / Miri / Sibu）等；未开城地区可先登记招募
 - 服务时段：每天 08:00–22:00（MYT）
 - 支持语言：中文 / English / Bahasa Malaysia
 

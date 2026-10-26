@@ -436,7 +436,7 @@ export default function Waitlist() {
                             ? "https://merchant.vgoservice.com/login/merchant"
                             : role === "tech" || role === "artisan"
                               ? "https://tech.vgoservice.com/login/provider"
-                              : "https://customer.vgoservice.com/login/customer";
+                              : "https://service.vgoservice.com/login/customer";
                           window.location.href = url;
                         }}
                         className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-white border border-gray-200 text-gray-700 font-bold text-[14px] hover:bg-gray-50 active:scale-[0.98] transition"

@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import {
   Rocket, TrendingUp, Bell, Wallet, ArrowRight, CheckCircle2,
   LayoutGrid, MessageSquare, ShieldCheck, BarChart3, GraduationCap,
-  Megaphone, Headphones, Quote, BadgeCheck,
+  Megaphone, Headphones, Quote, BadgeCheck, Flame,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
@@ -22,6 +22,8 @@ const C = {
       { Icon: Bell,         title: "订单直接推送", desc: "新订单即时通知，不错过任何生意" },
       { Icon: Wallet,       title: "透明费率",     desc: "无隐藏收费，合作清清楚楚" },
       { Icon: LayoutGrid,   title: "免费店铺页",   desc: "一键上架服务，管理菜单和排班" },
+      { Icon: LayoutGrid,   title: "SaaS 微站专属链接", desc: "独立店铺页面，客户直达，品牌曝光" },
+      { Icon: Flame,        title: "首批 0 佣金", desc: "前 100 名商家前 3 个月 0 平台抽成" },
       { Icon: MessageSquare,title: "专属客服支持", desc: "遇到问题随时联系，协助处理" },
     ],
     stats: [
@@ -424,7 +426,7 @@ export default function MerchantPage() {
           <div className="relative">
             <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{c.cta_t}</h2>
             <p className="text-sm text-white/85 mb-8 max-w-md mx-auto">{c.cta_s}</p>
-            <a href="mailto:support.vgo@gmail.com" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="https://merchant.vgoservice.com/register" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {c.cta_btn} <ArrowRight size={18} />
             </a>
             <p className="text-xs text-white/60 mt-4">{c.cta_note}</p>

@@ -9,7 +9,7 @@ const APPS = [
     title: { zh: "客户版 App", en: "Customer App", ms: "App Pelanggan" },
     desc: { zh: "下单、报价、支付、评价", en: "Order, quote, pay, review", ms: "Pesan, sebut harga, bayar, ulasan" },
     cta: { zh: "打开客户版", en: "Open Customer", ms: "Buka Pelanggan" },
-    href: "https://customer.vgoservice.com",
+    href: "https://service.vgoservice.com",
     color: "#4A90D9",
   },
   {

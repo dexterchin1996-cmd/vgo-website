@@ -22,6 +22,9 @@ const C = {
       { Icon: Wallet,      title: "按单结算",   desc: "每单完工即时记录，按周期自动入账" },
       { Icon: TrendingUp,  title: "公平定价",   desc: "标准服务平台定价，其他服务自主报价" },
       { Icon: Award,       title: "等级成长",   desc: "接单越多、评价越好，越优先派单" },
+      { Icon: Award,       title: "阶梯抽成",   desc: "等级越高，平台抽成越低，多劳多得" },
+      { Icon: Zap,         title: "完工秒结款", desc: "客户验收后款项即时结算，不拖欠" },
+      { Icon: BarChart3,   title: "接单大厅",   desc: "附近订单实时刷新，直接抢单" },
     ],
     stats: [
       { n: "首批", l: "邀请制" },
@@ -448,7 +451,7 @@ export default function TechnicianPage() {
           <div className="relative">
             <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{c.cta_t}</h2>
             <p className="text-sm text-white/85 mb-8 max-w-md mx-auto">{c.cta_s}</p>
-            <a href="mailto:support.vgo@gmail.com" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="https://tech.vgoservice.com/register" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {c.cta_btn} <ArrowRight size={18} />
             </a>
             <p className="text-xs text-white/60 mt-4">{c.cta_note}</p>

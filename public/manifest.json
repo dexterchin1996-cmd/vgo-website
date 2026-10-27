@@ -1,34 +1,8 @@
 {
-  "name": "V'GO · Malaysia On-Demand Home Service",
+  "name": "V'GO 生活服务",
   "short_name": "V'GO",
-  "description": "Malaysia on-demand home service platform. Certified pros, transparent pricing, one-tap booking.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#06111d",
-  "theme_color": "#ff7900",
-  "lang": "zh-MY",
-  "dir": "ltr",
-  "categories": ["business", "productivity", "lifestyle"],
-  "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+  "theme_color": "#FF6600",
+  "background_color": "#0a0d11"
 }

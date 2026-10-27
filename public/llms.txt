@@ -1,0 +1,38 @@
+# V'GO Services（V Go On）
+
+> 马来西亚**全马**上门生活服务平台（13 州 + 3 联邦直辖区）。客户线上下单，师傅上门或到店服务，付款走线下 DuitNow 扫码 + 上传凭证 + 平台人工审核。
+
+## 是什么
+- 平台名：V'GO / V Go On（运营方：Ventus Reflexology）
+- 覆盖区域：Kuala Lumpur、Selangor（Petaling Jaya / Subang Jaya / Shah Alam / Klang）、Penang（George Town / Bayan Lepas）、Johor（Johor Bahru）、Sabah（Kota Kinabalu / Sandakan / Tawau）、Sarawak（Kuching / Miri / Sibu）等；未开城地区可先登记招募
+- 服务时段：每天 08:00–22:00（MYT）
+- 支持语言：中文 / English / Bahasa Malaysia
+
+## 提供哪些服务
+- 上门按摩 / 推拿（按脚、身体、油压；60 / 90 / 120 分钟）
+- 美容 / 美甲 / 美发
+- 居家清洁、深度清洁
+- 空调清洗与保养
+- 居家维修 / 水电小修
+- 跑腿 / 代购、二手与零工（散工）接单
+
+## 怎么用
+1. 打开 https://service.vgoservice.com 下单，填写服务地址与时间
+2. 平台给出报价（金额由服务端按服务项目与时长计算）
+3. 到付款页扫 DuitNow 二维码转账，上传付款凭证
+4. 平台人工核对金额与凭证，确认后订单进入服务流程
+5. 服务完成后双方评价；有争议可走平台申诉
+
+## 付款与安全
+- 收款方式：DuitNow QR / 银行转账（线下），暂不接在线支付网关
+- 金额校验：服务端重算应付金额，少付会被拦下（AMOUNT_SHORT）并要求补付
+- 凭证防重：同一张凭证的哈希与感知哈希都会被查重，重复使用会被拒
+- 师傅与商家入驻均需平台人工审核
+
+## 加入我们
+- 师傅端：https://tech.vgoservice.com（免费入驻，无押金，服务完成按平台结算）
+- 商家端：https://merchant.vgoservice.com（可创建优惠券、投放区域广播）
+- 联系邮箱：support.vgo@gmail.com
+
+## 关键词
+上门服务、按摩、美容、清洁、空调清洗、维修、跑腿、亚庇、沙巴、Kota Kinabalu、Damai、Luyang、home service Malaysia、massage Kota Kinabalu

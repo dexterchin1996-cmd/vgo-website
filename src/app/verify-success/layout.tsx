@@ -1,29 +1,14 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import { TRANSLATIONS, type Lang } from "@/lib/translations";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const raw = cookieStore.get("vgo_lang")?.value;
-  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
-  const T = TRANSLATIONS[lang] as Record<string, string>;
-  const title = T.verify_success_meta_title ?? "verify-success | V'GO";
-  const description = T.verify_success_meta_desc ?? "";
+  const title = "验证成功 | V'GO";
+  const description = "邮箱验证成功。";
   return {
     title,
     description,
     robots: { index: false, follow: false },
-    openGraph: {
-      title,
-      description,
-      url: "/verify-success/",
-      type: "website",
-    },
-    twitter: {
-      card: "summary",
-      title,
-      description,
-    },
+    openGraph: { title, description, url: "/verify-success/", type: "website" },
+    twitter: { card: "summary", title, description },
   };
 }
 

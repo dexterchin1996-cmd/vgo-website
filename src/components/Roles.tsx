@@ -13,7 +13,7 @@ export default function Roles() {
       desc: t("role_customer_desc"),
       points: [t("role_customer_p1"), t("role_customer_p2"), t("role_customer_p3"), t("role_customer_p4")],
       cta: t("role_customer_cta"),
-      href: "/how-it-works/customer",
+      href: "/customer",
       img: "/shared/s03.jpg",
     },
     {

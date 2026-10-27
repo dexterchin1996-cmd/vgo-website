@@ -179,6 +179,30 @@ const jsonLdGraph = {
       publisher: { "@id": BASE_URL + "/#business" },
     },
     {
+      "@type": "Organization",
+      "@id": BASE_URL + "/customer/#org",
+      name: "V'GO Customer Platform",
+      url: BASE_URL + "/customer",
+      description: "马来西亚上门服务客户端。平台担保交易、先报价后开工、7 天质保、认证师傅随叫随到。",
+      sameAs: [BASE_URL + "/customer"],
+    },
+    {
+      "@type": "Organization",
+      "@id": BASE_URL + "/merchant/#org",
+      name: "V'GO Merchant Platform",
+      url: BASE_URL + "/merchant",
+      description: "马来西亚商家入驻平台。免费入驻、SaaS 微站专属链接、平台派单、零成本获取客户。",
+      sameAs: [BASE_URL + "/merchant"],
+    },
+    {
+      "@type": "Organization",
+      "@id": BASE_URL + "/technician/#org",
+      name: "V'GO Technician Platform",
+      url: BASE_URL + "/technician",
+      description: "马来西亚师傅入驻平台。0门槛接单、阶梯抽成、完工秒结款、接单大厅直接抢单。",
+      sameAs: [BASE_URL + "/technician"],
+    },
+    {
       "@type": "FAQPage",
       "@id": BASE_URL + "/#faq",
       mainEntity: [

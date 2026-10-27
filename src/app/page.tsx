@@ -87,10 +87,10 @@ export default function Home() {
                 className="mt-14 flex items-center gap-8"
               >
                 <Link
-                  href="/how-it-works/customer"
+                  href="/customer"
                   className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#ff7900] text-white font-bold text-base shadow-[0_15px_40px_-12px_rgba(255,121,0,0.65)] hover:bg-[#ff8a1f] hover:scale-[1.03] transition-all duration-300"
                 >
-                  立即体验
+                  {t("cta_customer")}
                   <span className="text-lg">→</span>
                 </Link>
                 <Link

@@ -1,6 +1,6 @@
 /**
  * VGO 统一入口配置
- * 官网所有登录/注册入口，都通过这里配置
+ * 官网所有Login/Register入口，都通过这里配置
  * 环境变量可覆盖默认域名：
  *   NEXT_PUBLIC_APP_CUSTOMER_URL
  *   NEXT_PUBLIC_APP_MERCHANT_URL
@@ -17,12 +17,12 @@ export const APP_URLS = {
   provider: process.env.NEXT_PUBLIC_APP_PROVIDER_URL || DEFAULT_PROVIDER,
 } as const;
 
-// ===== 登录入口 =====
+// ===== Login入口 =====
 export const LOGIN_CUSTOMER_URL = `${APP_URLS.customer}/login/customer`;
 export const LOGIN_MERCHANT_URL = `${APP_URLS.merchant}/login/merchant`;
 export const LOGIN_PROVIDER_URL = `${APP_URLS.provider}/login/provider`;
 
-// ===== 注册入口 =====
+// ===== Register入口 =====
 export const REGISTER_CUSTOMER_URL = `${APP_URLS.customer}/register`;
 export const REGISTER_MERCHANT_URL = `${APP_URLS.merchant}/register`;
 export const REGISTER_PROVIDER_URL = `${APP_URLS.provider}/register`;
@@ -48,14 +48,14 @@ export const AUTH_OPTIONS: AuthOption[] = [
     role: "customer",
     icon: "user",
     label: { zh: "客户", en: "Customer",   ms: "Pelanggan"  },
-    sub:   { zh: "找服务", en: "Book Services", ms: "Tempah Servis" },
+    sub:   { zh: "找Services", en: "Book Services", ms: "Tempah Servis" },
     loginUrl: LOGIN_CUSTOMER_URL,
     registerUrl: REGISTER_CUSTOMER_URL,
   },
   {
     role: "merchant",
     icon: "store",
-    label: { zh: "商家", en: "Merchant",   ms: "Peniaga"    },
+    label: { zh: "Merchant", en: "Merchant",   ms: "Peniaga"    },
     sub:   { zh: "做生意", en: "Do Business",  ms: "Berniaga" },
     loginUrl: LOGIN_MERCHANT_URL,
     registerUrl: REGISTER_MERCHANT_URL,
@@ -63,7 +63,7 @@ export const AUTH_OPTIONS: AuthOption[] = [
   {
     role: "provider",
     icon: "wrench",
-    label: { zh: "师傅", en: "Technician", ms: "Juruteknik" },
+    label: { zh: "Provider", en: "Technician", ms: "Juruteknik" },
     sub:   { zh: "靠技术", en: "Offer Skills", ms: "Tawar Servis" },
     loginUrl: LOGIN_PROVIDER_URL,
     registerUrl: REGISTER_PROVIDER_URL,

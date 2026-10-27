@@ -8,10 +8,10 @@ import { AUTH_OPTIONS } from "@/lib/appUrls";
 
 const ROLE_ICONS: Record<string, typeof User> = { user: User, store: Store, wrench: Wrench };
 
-const LANGS: { code: Lang; label: string; native: string }[] = [
-  { code: "zh", label: "中文", native: "简体中文" },
-  { code: "en", label: "English", native: "English" },
-  { code: "ms", label: "Bahasa Melayu", native: "Bahasa Melayu" },
+const LANGS: { code: Lang; labelKey: string; nativeKey: string }[] = [
+  { code: "zh", labelKey: "lang_zh", nativeKey: "lang_zh_native" },
+  { code: "en", labelKey: "lang_en", nativeKey: "lang_en_native" },
+  { code: "ms", labelKey: "lang_ms", nativeKey: "lang_ms_native" },
 ];
 
 export default function SideDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -44,9 +44,9 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
         { icon: Info,     label: t("drawer_about"),  href: "/about/" },
         { icon: BookOpen, label: t("drawer_how"),    href: "/how-it-works/customer/" },
         { icon: Gift,     label: t("drawer_offers"), href: "/offers/" },
-        { icon: Store,    label: t("role_merchant_cta") || "商家入驻", href: "/merchant/" },
-          { icon: Wrench,   label: t("role_tech_cta") || "师傅入驻", href: "/technician/" },
-          { icon: Users,    label: t("nav_partner"),   href: "/partner/" },
+        { icon: Store,    label: t("role_merchant_cta"), href: "/merchant/" },
+        { icon: Wrench,   label: t("role_tech_cta"), href: "/technician/" },
+        { icon: Users,    label: t("nav_partner"),   href: "/partner/" },
       ],
     },
   ];
@@ -68,7 +68,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                 <Image src="/logo-mark.svg" alt="V'GO" width={36} height={36} className="w-9 h-9 object-contain shrink-0" />
                 <div className="flex flex-col leading-none">
                   <span className="font-black text-lg text-gray-900">V&apos;GO</span>
-                  <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">Smart. Simple. Sorted.</span>
+                  <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">{t("nav_tagline")}</span>
                 </div>
               </div>
               <button onClick={onClose} aria-label="close" className="w-10 h-10 rounded-xl hover:bg-gray-100 flex items-center justify-center text-gray-500">
@@ -142,7 +142,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                   className="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-gray-200 hover:border-gray-300 transition">
                   <span className="flex items-center gap-2.5">
                     <Globe size={18} strokeWidth={2} className="text-gray-500" />
-                    <span className="text-sm font-semibold text-gray-700">{currentLang?.label}</span>
+                    <span className="text-sm font-semibold text-gray-700">{currentLang?.labelKey ? t(currentLang.labelKey) : ""}</span>
                   </span>
                   <span className="text-[10px] text-gray-400 font-semibold uppercase">{lang === "ms" ? "BM" : lang}</span>
                 </button>
@@ -154,8 +154,8 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                         <button key={l.code} onClick={() => { setLang(l.code); setLangOpen(false); }}
                           className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 transition">
                           <span className="flex flex-col items-start">
-                            <span className="font-semibold text-gray-900">{l.label}</span>
-                            <span className="text-[10px] text-gray-400">{l.native}</span>
+                            <span className="font-semibold text-gray-900">{t(l.labelKey)}</span>
+                            <span className="text-[10px] text-gray-400">{t(l.nativeKey)}</span>
                           </span>
                           {lang === l.code && <Check size={16} className="text-[var(--vgo)]" />}
                         </button>
@@ -172,11 +172,10 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
           <button 
             onClick={() => { 
               window.dispatchEvent(new Event("open-waitlist")); 
-              // 如果 SideDrawer 有 onClose 属性，这里最好调用 onClose，但没有的话只能靠点击遮罩关闭
             }} 
             className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#FF7A00] py-3.5 text-sm font-bold text-white shadow-lg shadow-orange-500/30"
           >
-            登录 / 注册
+            {t("drawer_login")} / {t("drawer_register")}
           </button>
         </div>
           </motion.aside>

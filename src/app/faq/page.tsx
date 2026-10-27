@@ -11,43 +11,43 @@ type Cat = "all" | "general" | "customer" | "merchant" | "tech" | "security";
 
 const CATS: Record<Cat, { zh: string; en: string; ms: string; Icon: LucideIcon }> = {
   all:      { zh: "全部", en: "All", ms: "Semua", Icon: HelpCircle },
-  general:  { zh: "关于 V'GO", en: "About V'GO", ms: "Tentang V'GO", Icon: HelpCircle },
+  general:  { zh: "About V'GO", en: "About V'GO", ms: "Tentang V'GO", Icon: HelpCircle },
   customer: { zh: "客户", en: "Customer", ms: "Pelanggan", Icon: User },
-  merchant: { zh: "商家", en: "Merchant", ms: "Peniaga", Icon: Store },
-  tech:     { zh: "师傅", en: "Technician", ms: "Juruteknik", Icon: Wrench },
+  merchant: { zh: "Merchant", en: "Merchant", ms: "Peniaga", Icon: Store },
+  tech:     { zh: "Provider", en: "Technician", ms: "Juruteknik", Icon: Wrench },
   security: { zh: "安全", en: "Security", ms: "Keselamatan", Icon: Shield },
 };
 
 const FAQ = {
   zh: [
-    { cat: "general", q: "V'GO 是什么？", a: "V'GO 是马来西亚上门服务平台，把认证师傅和有需要的家庭连在一起。你可以在这里找维修、清洁、按摩、跑腿、二手交易、招工等服务。我们目前覆盖沙巴州亚庇地区，正在持续扩展中。" },
-    { cat: "general", q: "覆盖哪些地区？", a: "目前覆盖马来西亚沙巴州亚庇及周边地区。我们计划在未来 12 个月逐步扩展到沙巴其他城市和西马主要城市。你可以在官网首页看到最新的覆盖区域地图。" },
-    { cat: "general", q: "V'GO 和 Grab 有什么不同？", a: "V'GO 专注上门生活服务（维修、清洁、按摩、跑腿、二手、招工），不是打车或外卖。我们是本地平台，客服说中文/英文/马来文，服务也由本地师傅提供。" },
+    { cat: "general", q: "V'GO 是什么？", a: "V'GO 是马来西亚上门Services平台，把认证Provider和有需要的家庭连在一起。你可以在这里找维修、清洁、按摩、跑腿、二手交易、招工等Services。我们目前覆盖沙巴州亚庇地区，正在持续扩展中。" },
+    { cat: "general", q: "覆盖哪些地区？", a: "目前覆盖马来西亚沙巴州亚庇及周边地区。我们计划在未来 12 个月逐步扩展到沙巴其他城市和西马主要城市。你可以在官网Home看到最新的覆盖区域地图。" },
+    { cat: "general", q: "V'GO 和 Grab 有什么不同？", a: "V'GO 专注上门生活Services（维修、清洁、按摩、跑腿、二手、招工），不是打车或外卖。我们是本地平台，客服说中文/英文/马来文，Services也由本地Provider提供。" },
     { cat: "general", q: "怎么联系客服？", a: "邮件 support.vgo@gmail.com 或 WhatsApp +60 11-7269 1788。工作时间为周一至周日 9:00-21:00（马来西亚时间），我们会在 24 小时内回复每一条信息。" },
 
-    { cat: "customer", q: "怎么下单？", a: "注册账号后下载 App，选择需要的服务，填写地址和时间，一键下单。系统会派附近的认证师傅接单，你可以实时看到师傅位置。下单前你会看到预估价格，师傅上门确认后才给出最终价格。" },
-    { cat: "customer", q: "价格怎么算？", a: "每个服务都有明确的起始价格区间，下单前你会看到报价。师傅上门确认后才会给出最终价格，你同意才开工，没有隐藏费用。如遇价格疑问，可随时联系客服协助。" },
-    { cat: "customer", q: "可以退款吗？", a: "可以。如果师傅未按时上门，或服务未完成，你可以申请全额退款。平台会在 1-3 个工作日内处理。如遇争议，平台客服会介入调查。" },
-    { cat: "customer", q: "可以指定师傅吗？", a: "如果平台提供指定功能，你可以在下单时备注。多次服务后可优先预约同一师傅，熟悉你的需求和偏好。具体以 App 内功能为准。" },
-    { cat: "customer", q: "服务时间多久？", a: "不同类型的服务时长不同，下单前会显示预估时长。维修类通常 30-120 分钟，清洁类 2-6 小时，按摩类 60-120 分钟。实际时长取决于具体问题复杂度和现场情况。" },
-    { cat: "customer", q: "可以在晚上下单吗？", a: "可以。平台 7×24 小时接单，深夜时段（22:00-06:00）部分服务可能加收服务费。紧急情况（如爆管、跳闸）优先派单。" },
+    { cat: "customer", q: "怎么下单？", a: "Register账号后下载 App，选择需要的Services，填写地址和时间，一键下单。系统会派附近的认证Provider接单，你可以实时看到Provider位置。下单前你会看到预估价格，Provider上门确认后才给出最终价格。" },
+    { cat: "customer", q: "价格怎么算？", a: "每个Services都有明确的起始价格区间，下单前你会看到报价。Provider上门确认后才会给出最终价格，你同意才开工，没有隐藏费用。如遇价格疑问，可随时联系客服协助。" },
+    { cat: "customer", q: "可以退款吗？", a: "可以。如果Provider未按时上门，或Services未完成，你可以申请全额退款。平台会在 1-3 个工作日内处理。如遇争议，平台客服会介入调查。" },
+    { cat: "customer", q: "可以指定Provider吗？", a: "如果平台提供指定功能，你可以在下单时备注。多次Services后可优先预约同一Provider，熟悉你的需求和偏好。具体以 App 内功能为准。" },
+    { cat: "customer", q: "Services时间多久？", a: "不同类型的Services时长不同，下单前会显示预估时长。维修类通常 30-120 分钟，清洁类 2-6 小时，按摩类 60-120 分钟。实际时长取决于具体问题复杂度和现场情况。" },
+    { cat: "customer", q: "可以在晚上下单吗？", a: "可以。平台 7×24 小时接单，深夜时段（22:00-06:00）部分Services可能加收Services费。紧急情况（如爆管、跳闸）优先派单。" },
 
-    { cat: "merchant", q: "商家怎么入驻？", a: "点击官网「商家合作」页面，提交 SSM 注册文件、IC、银行资料，我们会在 1-2 个工作日内审核。免费入驻，按单结算，没有隐藏费用。" },
-    { cat: "merchant", q: "需要什么文件？", a: "需要：SSM 营业注册文件（Form D/9/24/49）、签署协议人的 IC 正反面、银行账户信息、品牌 Logo 和门店照片、服务目录和价格表。如有 Halal / SST 认证也请一并提供。" },
-    { cat: "merchant", q: "平台收取多少费用？", a: "VGO 对标准服务订单收取一定比例的平台服务费，具体费率以双方签署的协议为准。所有费用在入驻前会明确告知，没有隐藏收费。前 2 个月有 0% 手续费优惠（限首批商家）。" },
-    { cat: "merchant", q: "结算周期是多久？", a: "订单完成后，款项按照平台约定的结算周期入账，通常为每周或每两周结算一次。具体以协议条款为准。" },
-    { cat: "merchant", q: "可以只上架部分服务吗？", a: "可以。你可以选择上架全部服务，也可以只上架部分。入驻后随时可以在商家后台调整服务目录。" },
+    { cat: "merchant", q: "Merchant怎么入驻？", a: "点击官网「Merchant合作」页面，提交 SSM Register文件、IC、银行资料，我们会在 1-2 个工作日内审核。免费入驻，按单结算，没有隐藏费用。" },
+    { cat: "merchant", q: "需要什么文件？", a: "需要：SSM 营业Register文件（Form D/9/24/49）、签署Terms人的 IC 正反面、银行账户信息、品牌 Logo 和门店照片、Services目录和价格表。如有 Halal / SST 认证也请一并提供。" },
+    { cat: "merchant", q: "平台收取多少费用？", a: "VGO 对标准ServicesOrders收取一定比例的平台Services费，具体费率以双方签署的Terms为准。所有费用在入驻前会明确告知，没有隐藏收费。前 2 个月有 0% 手续费优惠（限首批Merchant）。" },
+    { cat: "merchant", q: "结算周期是多久？", a: "Orders完成后，款项按照平台约定的结算周期入账，通常为每周或每两周结算一次。具体以Terms条款为准。" },
+    { cat: "merchant", q: "可以只上架部分Services吗？", a: "可以。你可以选择上架全部Services，也可以只上架部分。入驻后随时可以在Merchant后台调整Services目录。" },
 
-    { cat: "tech", q: "手艺人怎么加入？", a: "点击官网「师傅入驻」页面，提交你的技能和身份信息。通过审核后即可接单，零成本，自己排时间。前 2 个月有 0% 手续费 + 创始徽章优惠（限首批师傅）。" },
-    { cat: "tech", q: "需要什么资料？", a: "需要：身份证（IC）正反面、专业技能证书（如有）、银行账户（收款用）、个人照片 + 工作照、无犯罪记录证明（部分服务需）、健康证明（美容/按摩类需）。" },
-    { cat: "tech", q: "多久能拿到钱？", a: "订单完成、客户验收后，款项按平台约定的结算周期自动打入你的银行账户。具体周期以入驻协议为准。" },
-    { cat: "tech", q: "客户不付款怎么办？", a: "V'GO 平台提供订单担保。所有通过平台的订单，客户付款会先进入平台托管，完工验收后才会放款给你。客户无法直接拖欠。" },
+    { cat: "tech", q: "手艺人怎么加入？", a: "点击官网「Provider入驻」页面，提交你的技能和身份信息。通过审核后即可接单，零成本，自己排时间。前 2 个月有 0% 手续费 + 创始徽章优惠（限首批Provider）。" },
+    { cat: "tech", q: "需要什么资料？", a: "需要：身份证（IC）正反面、专业技能证书（如有）、银行账户（收款用）、个人照片 + 工作照、无犯罪记录证明（部分Services需）、健康证明（美容/按摩类需）。" },
+    { cat: "tech", q: "多久能拿到钱？", a: "Orders完成、客户验收后，款项按平台约定的结算周期自动打入你的银行账户。具体周期以入驻Terms为准。" },
+    { cat: "tech", q: "客户不付款怎么办？", a: "V'GO 平台提供Orders担保。所有通过平台的Orders，客户付款会先进入平台托管，完工验收后才会放款给你。客户无法直接拖欠。" },
     { cat: "tech", q: "每天必须接单吗？", a: "不必须。你完全自主决定接单时间和数量。想多赚就多接，想休息就下线。平台不会强制派单。" },
 
-    { cat: "security", q: "数据安全吗？", a: "我们采用行业标准安全措施：传输加密（HTTPS）、密码 scrypt 加密、访问控制、密钥隔离、日志审计。所有敏感数据（如手机号）在日志中脱敏处理。详见隐私政策。" },
-    { cat: "security", q: "师傅有认证吗？", a: "有。所有师傅入驻前都需通过身份验证和技能审核，可查真实身份、真实评价、真实服务记录。维修类师傅还需提供相关资质证明。平台全程记录服务过程，保障双方权益。" },
-    { cat: "security", q: "服务过程安全吗？", a: "平台要求所有师傅签署服务规范，包括：按时到达、先报价后动手、不擅自加价、不乱翻客户物品、服务过程可留档。如遇不当行为，可立即投诉，平台介入处理。" },
-    { cat: "security", q: "我的个人信息会被公开吗？", a: "不会。我们严格遵守 PDPA 2024（马来西亚个人数据保护法）。你的手机号、地址、身份证信息都加密存储，仅在服务过程中提供给对应的师傅，服务完成后自动隐藏。" },
+    { cat: "security", q: "数据安全吗？", a: "我们采用行业标准安全措施：传输加密（HTTPS）、密码 scrypt 加密、访问控制、密钥隔离、日志审计。所有敏感数据（如手机号）在日志中脱敏处理。详见Privacy政策。" },
+    { cat: "security", q: "Provider有认证吗？", a: "有。所有Provider入驻前都需通过身份验证和技能审核，可查真实身份、真实评价、真实Services记录。维修类Provider还需提供相关资质证明。平台全程记录Services过程，保障双方权益。" },
+    { cat: "security", q: "Services过程安全吗？", a: "平台要求所有Provider签署Services规范，包括：按时到达、先报价后动手、不擅自加价、不乱翻客户物品、Services过程可留档。如遇不当行为，可立即投诉，平台介入处理。" },
+    { cat: "security", q: "我的个人信息会被公开吗？", a: "不会。我们严格遵守 PDPA 2024（马来西亚个人数据保护法）。你的手机号、地址、身份证信息都加密存储，仅在Services过程中提供给对应的Provider，Services完成后自动隐藏。" },
   ],
   en: [
     { cat: "general", q: "What is V'GO?", a: "V'GO is a Malaysia home-service platform connecting certified pros with families in need. Find repair, cleaning, massage, errands, second-hand trading, and job listings all in one place. We currently cover Kota Kinabalu, Sabah, and are expanding steadily." },
@@ -129,7 +129,7 @@ export default function FaqPage() {
 
   return (
     <PageShell label={c === "en" ? "FAQ" : c === "ms" ? "Soalan Lazim" : "常见问题"} title={c === "en" ? "Frequently Asked Questions" : c === "ms" ? "Soalan Lazim" : "常见问题"}>
-      {/* 搜索 */}
+      {/* Search */}
       <div className="not-prose mb-6">
         <div className="relative">
           <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
@@ -137,7 +137,7 @@ export default function FaqPage() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={c === "en" ? "Search questions..." : c === "ms" ? "Cari soalan..." : "搜索问题..."}
+            placeholder={c === "en" ? "Search questions..." : c === "ms" ? "Cari soalan..." : "Search问题..."}
             className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-[#06111d]/5 border border-white/10 text-white text-sm outline-none focus:border-[var(--vgo)] placeholder-white/40 transition"
           />
         </div>

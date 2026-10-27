@@ -8,45 +8,45 @@ import PageShell from "@/components/PageShell";
 
 const C = {
   zh: {
-    label: "关于我们", title: "我们是谁",
-    intro: "V'GO（V Go On）是马来西亚上门服务平台。我们把有需要的家庭和认证师傅连在一起，让\"找服务\"这件事变得简单、透明、可靠。",
+    label: "About我们", title: "我们是谁",
+    intro: "V'GO（V Go On）是马来西亚上门Services平台。我们把有需要的家庭和认证Provider连在一起，让\"找Services\"这件事变得简单、透明、可靠。",
     mission_t: "我们的使命",
-    mission: "让每个家庭都能轻松找到靠谱的师傅，让每个有手艺的人都能凭本事吃饭。",
+    mission: "让每个家庭都能轻松找到靠谱的Provider，让每个有手艺的人都能凭本事吃饭。",
     story_t: "我们的故事",
-    story: "V'GO 从沙巴起步，看向整个马来西亚。我们看见身边太多人：想修水管找不到人、价格被坑、约了师傅不来；另一头，手艺人等熟人介绍、生意不稳定。V'GO 要做的，就是把这两头接通——用最简单的手机操作，让服务上门，让手艺有舞台。",
+    story: "V'GO 从沙巴起步，看向整个马来西亚。我们看见身边太多人：想修水管找不到人、价格被坑、约了Provider不来；另一头，手艺人等熟人介绍、生意不稳定。V'GO 要做的，就是把这两头接通——用最简单的手机操作，让Services上门，让手艺有舞台。",
     values_t: "我们的价值观",
     values: [
-      { Icon: ShieldCheck, t: "认证优先", d: "每个师傅都经过身份验证和技能审核，你不用担心来的是谁。" },
-      { Icon: Sparkles,    t: "价格透明", d: "下单前看得到价格区间，师傅上门确认后才开工，没有隐藏费用。" },
+      { Icon: ShieldCheck, t: "认证优先", d: "每个Provider都经过身份验证和技能审核，你不用担心来的是谁。" },
+      { Icon: Sparkles,    t: "价格透明", d: "下单前看得到价格区间，Provider上门确认后才开工，没有隐藏费用。" },
       { Icon: Clock,       t: "准时上门", d: "约定时间准时到，迟到提前告知，全程可追踪。" },
-      { Icon: Heart,       t: "用户第一", d: "每一次服务后的评价，都会影响师傅的派单优先级。" },
+      { Icon: Heart,       t: "用户第一", d: "每一次Services后的评价，都会影响Provider的派单优先级。" },
       { Icon: Award,       t: "本地团队", d: "马来西亚团队，懂本地需求，客服说中文/英文/马来文。" },
-      { Icon: TrendingUp,  t: "共同成长", d: "师傅接单越多、评价越好，越优先派单，收入越高。" },
+      { Icon: TrendingUp,  t: "共同成长", d: "Provider接单越多、评价越好，越优先派单，收入越高。" },
     ],
     stats_t: "我们的目标",
     stats: [
-      { n: "6 大", l: "服务类目" },
+      { n: "6 大", l: "Services类目" },
       { n: "3 语", l: "中英马支持" },
       { n: "亚庇", l: "首发城市" },
       { n: "全马", l: "覆盖目标" },
     ],
     timeline_t: "我们的历程",
     timeline: [
-      { d: "2024", t: "想法萌生", ds: "在沙巴看到找师傅难、手艺人生意不稳的问题" },
+      { d: "2024", t: "想法萌生", ds: "在沙巴看到找Provider难、手艺人生意不稳的问题" },
       { d: "2025", t: "平台研发", ds: "组建团队，开发 V'GO 平台核心功能" },
-      { d: "2026 Q1", t: "亚庇首发", ds: "首批认证师傅和商家入驻，平台试运营" },
+      { d: "2026 Q1", t: "亚庇首发", ds: "首批认证Provider和Merchant入驻，平台试运营" },
       { d: "2026 Q2", t: "全马扩展", ds: "逐步扩展至沙巴其他城市及西马主要城市" },
     ],
-    roles_t: "平台服务三类人群",
+    roles_t: "平台Services三类人群",
     roles: [
       { Icon: Home,   t: "家庭客户", d: "找维修、清洁、按摩、跑腿，一站搞定" },
-      { Icon: Store,  t: "本地商家", d: "把生意搬到线上，触达附近客户" },
+      { Icon: Store,  t: "本地Merchant", d: "把生意搬到线上，触达附近客户" },
       { Icon: Wrench, t: "手艺人",   d: "就近接单，按单结算，自己排时间" },
     ],
-    region_t: "服务范围",
+    region_t: "Services范围",
     region: "目前覆盖马来西亚沙巴州亚庇及周边地区，持续扩展中。沙巴是我们起点，全马是我们的目标。",
     contact_t: "想了解更多？",
-    contact_d: "无论你是客户、商家、师傅还是合作伙伴，欢迎联系我们。",
+    contact_d: "无论你是客户、Merchant、Provider还是合作伙伴，欢迎Contact。",
   },
   en: {
     label: "About Us", title: "Who We Are",
@@ -241,7 +241,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* 服务范围 */}
+      {/* Services范围 */}
       <div className="not-prose mb-12 p-6 rounded-2xl bg-[#06111d]/5 border border-white/10">
         <div className="flex items-center gap-2 mb-2">
           <MapPin size={18} className="text-[var(--vgo)]" />

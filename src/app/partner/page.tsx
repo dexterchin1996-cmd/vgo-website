@@ -78,20 +78,18 @@ export default function PartnerPage() {
           {t("partner_label")}
         </motion.div>
 
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-black leading-[1.1] tracking-tight">
+        <h2 className="vgo-heading text-4xl sm:text-6xl md:text-7xl font-black leading-[1.1] tracking-tight">
           <span className="text-[#D95000] drop-shadow-[0_0_50px_rgba(255,180,0,0.4)]">
             {t("partner_title")}
           </span>
-        </motion.h1>
-
+        </h2>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-6 text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
           {t("partner_intro")}
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          className="mt-10 flex flex-row flex-wrap items-center justify-center gap-3">
           <a href="mailto:support.vgo@gmail.com"
             className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
             <Mail size={18} />
@@ -112,7 +110,7 @@ export default function PartnerPage() {
           <p className="text-sm sm:text-base text-white/60 max-w-2xl mx-auto leading-relaxed">{t("coop_sub")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
           {COOP.map((c, i) => (
             <motion.a key={c.title} href={c.href}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
@@ -137,7 +135,7 @@ export default function PartnerPage() {
           <p className="text-sm sm:text-base text-white/60 max-w-2xl mx-auto leading-relaxed">{t("flow_sub")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-3">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-4">
           {FLOW.map((f, i) => (
             <motion.div key={f.n} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative p-6 rounded-2xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10">
@@ -156,7 +154,7 @@ export default function PartnerPage() {
           <p className="text-sm sm:text-base text-white/60 max-w-2xl mx-auto leading-relaxed">{t("earn_sub")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
           {EARN.map((e, i) => (
             <motion.div key={e.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="p-7 rounded-3xl bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-xl border border-white/15">
@@ -182,7 +180,7 @@ export default function PartnerPage() {
           {t("partner_why_title")}
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
           {WHY.map((w, i) => (
             <motion.div key={w.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
               className="p-7 rounded-3xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/40 hover:bg-[#06111d]/8 transition-[transform,box-shadow,opacity,width,background-color]">
@@ -202,7 +200,7 @@ export default function PartnerPage() {
           {t("partner_traction_title")}
         </motion.h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-3">
           {TRACTION.map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
               className="p-5 sm:p-6 rounded-2xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10 text-center">
@@ -219,7 +217,7 @@ export default function PartnerPage() {
           className="p-10 sm:p-14 rounded-[32px] bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-xl border border-white/15">
           <h2 className="text-2xl sm:text-4xl font-black mb-4">{t("partner_cta_title")}</h2>
           <p className="text-sm sm:text-base text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">{t("partner_cta_desc")}</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-3">
             <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               <Mail size={18} />
               {t("partner_contact_email")}

@@ -2,21 +2,42 @@
 
 import { motion } from "motion/react";
 import { ShieldCheck, Zap, Award } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 const TRUST_CARDS = [
-  { icon: ShieldCheck, title: "严格实名审核", text: "所有入驻师傅均需通过身份证、技能证书双重审核，保障您的安全。", color: "text-blue-500", bg: "bg-blue-500/10" },
-  { icon: Zap, title: "明码标价机制", text: "下单前确认价格明细，服务过程中绝不产生任何隐藏费用或临时加价。", color: "text-[#ff7900]", bg: "bg-[#ff7900]/10" },
-  { icon: Award, title: "完工验收保障", text: "服务完成后，由您亲自验收确认满意，平台才会将款项结算给师傅。", color: "text-green-500", bg: "bg-green-500/10" },
+  {
+    icon: ShieldCheck,
+    titleKey: "trust_title1",
+    textKey: "trust_desc1",
+    color: "text-blue-500",
+    bg: "bg-blue-500/10",
+  },
+  {
+    icon: Zap,
+    titleKey: "trust_title2",
+    textKey: "trust_desc2",
+    color: "text-[#ff7900]",
+    bg: "bg-[#ff7900]/10",
+  },
+  {
+    icon: Award,
+    titleKey: "trust_title3",
+    textKey: "trust_desc3",
+    color: "text-green-500",
+    bg: "bg-green-500/10",
+  },
 ];
 
 export default function PlatformTrust() {
+  const { t } = useLang();
+
   return (
     <section className="relative bg-[#06111d] py-16 sm:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6" style={{ perspective: "1000px" }}>
           {TRUST_CARDS.map((item, i) => (
             <motion.div
-              key={i}
+              key={item.titleKey}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -28,8 +49,8 @@ export default function PlatformTrust() {
               <div className={`w-16 h-16 rounded-2xl ${item.bg} flex items-center justify-center mb-6`}>
                 <item.icon className={`w-8 h-8 ${item.color}`} />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{item.text}</p>
+              <h3 className="text-xl font-bold text-white mb-4">{t(item.titleKey)}</h3>
+              <p className="text-white/50 text-sm leading-relaxed">{t(item.textKey)}</p>
             </motion.div>
           ))}
         </div>

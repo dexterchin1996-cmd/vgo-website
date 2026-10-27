@@ -77,8 +77,8 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-5 space-y-1.5 text-xs text-white/50">
-              <p>WhatsApp: <a href="https://wa.me/601172691788" className="text-white/75 hover:text-[var(--vgo)] transition-colors">+60 11-7269 1788</a></p>
-              <p>Email: <a href="mailto:support.vgo@gmail.com" className="text-white/75 hover:text-[var(--vgo)] transition-colors">support.vgo@gmail.com</a></p>
+              <p>{t("footer_whatsapp")}: <a href="https://wa.me/601172691788" className="text-white/75 hover:text-[var(--vgo)] transition-colors">+60 11-7269 1788</a></p>
+              <p>{t("footer_email")}: <a href="mailto:support.vgo@gmail.com" className="text-white/75 hover:text-[var(--vgo)] transition-colors">support.vgo@gmail.com</a></p>
             </div>
           </div>
 
@@ -104,9 +104,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-row flex-wrap items-center justify-between gap-4 text-xs text-white/40">
           <div>{t("footer_copyright")}</div>
-          <div className="text-[10px] text-white/40 mt-1">VGO · 由 Ventus Reflexology 运营</div>
+          <div className="text-[10px] text-white/40 mt-1">{t("footer_operated")}</div>
           <div className="flex items-center gap-4">
             <span>{t("footer_location")}</span>
           </div>

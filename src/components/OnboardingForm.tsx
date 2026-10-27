@@ -38,7 +38,7 @@ export default function OnboardingForm() {
       setStatus("error");
       // 捕获后端返回的具体错误，或者显示友好提示
       const friendlyMsg = err.message?.includes("fetch") 
-        ? "无法连接到服务器，请检查网络后重试。" 
+        ? "无法连接到Services器，请检查网络后重试。" 
         : (err.message || "提交失败，请稍后再试。");
       setErrMsg(friendlyMsg);
     }

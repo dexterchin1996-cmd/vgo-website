@@ -8,17 +8,17 @@ import { useLang } from "@/lib/i18n";
 const C = {
   zh: {
     label: "为什么选 V'GO",
-    title: "传统找师傅 vs V'GO 平台",
+    title: "传统找Provider vs V'GO 平台",
     sub: "不再靠运气，不再怕被坑。平台把每一项顾虑都变成了明确承诺。",
     rows: [
       {
         feature: "价格是否透明",
-        traditional: "师傅现场报价，随时可能坐地起价，无从比较",
-        vgo: "下单前看明码标价，师傅上门前确认最终价格，你同意才开工",
+        traditional: "Provider现场报价，随时可能坐地起价，无从比较",
+        vgo: "下单前看明码标价，Provider上门前确认最终价格，你同意才开工",
         icon: Wallet,
       },
       {
-        feature: "师傅是否靠谱",
+        feature: "Provider是否靠谱",
         traditional: "朋友圈、路边小广告，身份不明，无背景审查",
         vgo: "实名认证 + 技能考核 + 背景调查，100% 可追溯，可投诉",
         icon: ShieldCheck,
@@ -26,23 +26,23 @@ const C = {
       {
         feature: "是否准时上门",
         traditional: "约了可能不来，电话不接，全靠运气",
-        vgo: "系统智能派单，实时追踪师傅位置，准时率 95%+",
+        vgo: "系统智能派单，实时追踪Provider位置，准时率 95%+",
         icon: Clock,
       },
       {
         feature: "付款是否安全",
-        traditional: "先付款，服务不好也拿不回钱，纠纷无人管",
+        traditional: "先付款，Services不好也拿不回钱，纠纷无人管",
         vgo: "平台担保交易，完工验收满意后才放款，7 天内可退款",
         icon: User,
       },
       {
-        feature: "服务不满意怎么办",
-        traditional: "师傅一走就没后续，返工要重新找、重新付费",
+        feature: "Services不满意怎么办",
+        traditional: "Provider一走就没后续，返工要重新找、重新付费",
         vgo: "7 天质保，同类问题免费返工或全额退款，平台介入协调",
         icon: CheckCircle2,
       },
     ],
-    cta: "亲身体验 V'GO 平台服务",
+    cta: "亲身体验 V'GO 平台Services",
     btn: "立即下单",
   },
   en: {
@@ -104,7 +104,7 @@ const C = {
 const ROW_LABELS = {
   zh: {
     col1: "对比项",
-    col2: "传统找师傅",
+    col2: "传统找Provider",
     col3: "V'GO 平台",
   },
   en: {

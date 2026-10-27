@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
     location: 'Kota Kinabalu, Sabah, Malaysia',
   },
   meta: {
-    title: "V'GO — 本地生活服务平台",
+    title: "V'GO — 本地生活Services平台",
     description: '便捷、可靠、值得信赖',
   },
 } as const;

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "隐私政策 | V'GO";
-  const description = "V'GO 隐私政策。";
+  const title = "Privacy政策 | V'GO";
+  const description = "V'GO Privacy政策。";
   return {
     title,
     description,

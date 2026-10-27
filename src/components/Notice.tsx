@@ -9,7 +9,7 @@ import { useLang } from "@/lib/i18n";
 const C = {
   zh: {
     tag: "新用户专享",
-    title: "注册即送 RM80",
+    title: "Register即送 RM80",
     sub: "上门检查券",
     desc: "限首批 1000 名，先到先得",
     cta: "立即领取",

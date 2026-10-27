@@ -88,13 +88,13 @@ export default function Pricing() {
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/5 text-white/20">
                   <X className="h-3.5 w-3.5" />
                 </div>
-                非标准服务类目
+                非标准Services类目
               </div>
               <div className="flex items-center gap-2.5 text-[13px] text-white/40">
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/5 text-white/20">
                   <X className="h-3.5 w-3.5" />
                 </div>
-                需师傅现场评估
+                需Provider现场评估
               </div>
             </div>
           </motion.div>

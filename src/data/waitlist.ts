@@ -1,4 +1,4 @@
-// VGO 注册数据 · 三语 + 分类树
+// VGO Register数据 · 三语 + 分类树
 export type Lang = "zh" | "en" | "ms";
 
 type Label = { zh: string; en: string; ms: string };
@@ -76,7 +76,7 @@ export const AREAS: Record<string, { value: string; label: Label }[]> = {
   miri: [{ value: "miri-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
 };
 
-// ===== 行业（商家）=====
+// ===== 行业（Merchant）=====
 export const INDUSTRIES: { value: string; label: Label; subs: { value: string; label: Label }[] }[] = [
   {
     value: "hardware",
@@ -295,7 +295,7 @@ export const ARTISAN_SKILLS: { value: string; label: Label; subs: { value: strin
   },
 ];
 
-// ===== 服务范围 =====
+// ===== Services范围 =====
 export const RANGES: { value: string; label: Label }[] = [
   { value: "5km",  label: { zh: "5 公里",  en: "Within 5 km",  ms: "Dalam 5 km" } },
   { value: "10km", label: { zh: "10 公里", en: "Within 10 km", ms: "Dalam 10 km" } },
@@ -304,7 +304,7 @@ export const RANGES: { value: string; label: Label }[] = [
   { value: "any",  label: { zh: "不限",    en: "Unlimited",    ms: "Tanpa Had" } },
 ];
 
-// ===== 服务方式（手艺人）=====
+// ===== Services方式（手艺人）=====
 export const SERVE_MODES: { value: string; label: Label }[] = [
   { value: "home",     label: { zh: "住家做", en: "At My Place",    ms: "Di Rumah Saya" } },
   { value: "visit",    label: { zh: "上门做", en: "At Customer's",  ms: "Ke Rumah Pelanggan" } },
@@ -314,42 +314,42 @@ export const SERVE_MODES: { value: string; label: Label }[] = [
 // ===== 三语文案 =====
 export const T = {
   zh: {
-    title: "抢先注册 VGO",
-    welcome: "注册即送 RM80 上门检查券",
+    title: "抢先Register VGO",
+    welcome: "Register即送 RM80 上门检查券",
     welcome_sub: "限首批 1000 名",
 
     intro_c_title: "抢先登记礼",
-    intro_c_sub: "抢先体验，服务到家",
-    intro_c_b1: "RM 80 上门检查礼券", intro_c_b1_sub: "注册即领",
+    intro_c_sub: "抢先体验，Services到家",
+    intro_c_b1: "RM 80 上门检查礼券", intro_c_b1_sub: "Register即领",
     intro_c_b2: "首批用户体验官", intro_c_b2_sub: "优先体验新功能",
     intro_c_b3: "早鸟专享权益", intro_c_b3_sub: "后续优惠优先享",
     intro_c_value: "RM 80", intro_c_limit: "限首批 1,000 名",
-    intro_m_title: "创始商家扶持包",
+    intro_m_title: "创始Merchant扶持包",
     intro_m_sub: "让您的生意，被更多人看见",
     intro_m_b1: "零门槛入驻", intro_m_b1_sub: "零成本启动，先跑先赢",
-    intro_m_b2: "首页黄金展位", intro_m_b2_sub: "精准曝光，全马用户可见",
+    intro_m_b2: "Home黄金展位", intro_m_b2_sub: "精准曝光，全马用户可见",
     intro_m_b3: "平台流量扶持", intro_m_b3_sub: "持续获客，客户主动上门",
     intro_m_b4: "官方社媒联推", intro_m_b4_sub: "品牌背书 + 矩阵推广",
-    intro_m_b5: "创始商家认证", intro_m_b5_sub: "专属徽章，建立信任",
+    intro_m_b5: "创始Merchant认证", intro_m_b5_sub: "专属徽章，建立信任",
     intro_m_value: "RM 1,500+", intro_m_limit: "限首批 100 名",
-    intro_t_title: "创始师傅礼包",
+    intro_t_title: "创始Provider礼包",
     intro_t_sub: "技能变现，稳定接单",
     intro_t_b1: "零门槛入驻", intro_t_b1_sub: "早鸟特权，零成本接单",
-    intro_t_b2: "订单优先匹配", intro_t_b2_sub: "平台派单优先触达",
-    intro_t_b3: "首页推荐曝光", intro_t_b3_sub: "精准触达目标客户",
+    intro_t_b2: "Orders优先匹配", intro_t_b2_sub: "平台派单优先触达",
+    intro_t_b3: "Home推荐曝光", intro_t_b3_sub: "精准触达目标客户",
     intro_t_b4: "平台流量扶持", intro_t_b4_sub: "稳定客源，持续接单",
-    intro_t_b5: "创始师傅认证", intro_t_b5_sub: "专属徽章，专业背书",
+    intro_t_b5: "创始Provider认证", intro_t_b5_sub: "专属徽章，专业背书",
     intro_t_value: "RM 1,000+", intro_t_limit: "限首批 100 名",
     intro_cta: "立即登记",
     intro_switch: "切换身份",
     role_label: "你是",
-    role_customer: "客户", role_merchant: "商家", role_tech: "技术员", role_artisan: "手艺人",
+    role_customer: "客户", role_merchant: "Merchant", role_tech: "技术员", role_artisan: "手艺人",
     sec_account: "账号信息",
     sec_info: "基本信息",
     sec_shop: "店铺信息",
     sec_address: "地址",
     sec_skill: "技能",
-    sec_mode: "服务方式",
+    sec_mode: "Services方式",
 
     username: "账号 ID", username_ph: "英文+数字，4-20 位",
     phone: "手机号", phone_ph: "+60123456789",
@@ -359,22 +359,22 @@ export const T = {
     name: "姓名", name_ph: "怎么称呼你",
     shopName: "店名", shopName_ph: "店铺名称",
     industry: "行业类别",
-    industrySubs: "具体服务（可多选）",
+    industrySubs: "具体Services（可多选）",
     skillMain: "技能类别",
     skillSubs: "具体技能（可多选）",
     yearsExp: "经验年数", yearsExp_ph: "如 5",
-    range: "服务范围",
-    serveMode: "服务方式",
+    range: "Services范围",
+    serveMode: "Services方式",
     cert: "证书 / 资质（可选）", cert_ph: "如 SKM 认证",
 
     state: "州", city: "城市", area: "区", detail: "详细地址",
     detail_ph: "街道 / 门牌号",
 
-    submit: "提交注册",
+    submit: "提交Register",
     submitting: "提交中…",
-    success_title: "注册成功！",
+    success_title: "Register成功！",
     success_sub: "你的账号 ID",
-    success_keep: "请截图保存，登录时使用",
+    success_keep: "请截图保存，Login时使用",
     success_bonus: "🎁 RM80 上门检查券已到账",
     success_next: "更多优惠即将公布，我们会通过邮件通知你",
     ok: "好的",
@@ -386,24 +386,24 @@ export const T = {
     err_email: "邮箱格式不对",
     err_password: "密码至少 8 位",
     err_confirm: "两次密码不一致",
-    err_taken: "该信息已被注册",
+    err_taken: "该信息已被Register",
     err_server: "提交失败，请稍后重试",
-    err_terms: "请先同意服务条款",
+    err_terms: "请先同意Services条款",
     agree_gate_title: "开始之前，请先阅读并同意",
-    agree_gate_sub: "为保障您的权益，请阅读以下协议后勾选。",
-    agree_lbl_terms: "我已阅读并同意《服务条款》",
-    agree_lbl_privacy: "我已阅读并同意《隐私政策》",
-    agree_lbl_role_customer: "我已阅读并同意《用户服务协议》",
-    agree_lbl_role_merchant: "我已阅读并同意《商家合作协议》",
-    agree_lbl_role_tech: "我已阅读并同意《师傅合作协议》",
-    agree_lbl_role_agent: "我已阅读并同意《区域代理协议》",
+    agree_gate_sub: "为保障您的权益，请阅读以下Terms后勾选。",
+    agree_lbl_terms: "我已阅读并同意《Services条款》",
+    agree_lbl_privacy: "我已阅读并同意《Privacy政策》",
+    agree_lbl_role_customer: "我已阅读并同意《用户ServicesTerms》",
+    agree_lbl_role_merchant: "我已阅读并同意《Merchant合作Terms》",
+    agree_lbl_role_tech: "我已阅读并同意《Provider合作Terms》",
+    agree_lbl_role_agent: "我已阅读并同意《区域代理Terms》",
     agree_next: "同意并继续",
-    err_agree_all: "请勾选全部协议后再继续",
-    agree_tip: "提示：点击协议名称可打开阅读全文。",
+    err_agree_all: "请勾选全部Terms后再继续",
+    agree_tip: "提示：点击Terms名称可打开阅读全文。",
     agree: "我已阅读并同意",
-    terms: "服务条款",
+    terms: "Services条款",
     and: "和",
-    privacy: "隐私政策",
+    privacy: "Privacy政策",
   },
   en: {
     title: "Join VGO Early Access",

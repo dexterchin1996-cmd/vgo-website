@@ -1,14 +1,14 @@
 export const OFFERS = {
   zh: {
-    label: "限时福利", title: "三大角色专属福利", sub: "注册即享 · 限首批 1000 名",
-    tab_customer: "客户", tab_merchant: "商家", tab_tech: "师傅",
-    cta: "立即注册领取", note: "福利不可叠加，最终解释权归 V'GO 所有",
-    customer_title: "RM80 上门检查券", customer_desc: "注册即送，首次下单立减 RM80",
-    customer_p: ["注册即到账","首单立减 RM80","全马通用","限首批 1000 名"],
+    label: "限时福利", title: "三大角色专属福利", sub: "Register即享 · 限首批 1000 名",
+    tab_customer: "客户", tab_merchant: "Merchant", tab_tech: "Provider",
+    cta: "立即Register领取", note: "福利不可叠加，最终解释权归 V'GO 所有",
+    customer_title: "RM80 上门检查券", customer_desc: "Register即送，首次下单立减 RM80",
+    customer_p: ["Register即到账","首单立减 RM80","全马通用","限首批 1000 名"],
     merchant_title: "前 2 个月 0% 手续费", merchant_desc: "入驻即享 2 个月免手续费，平台让利不出现金",
     merchant_p: ["0 元入驻","前 2 月 0 手续费","免费店铺页","限首批 100 名"],
-    tech_title: "0% 手续费 + 创始徽章", tech_desc: "前 2 个月 0% 手续费，加创始师傅专属徽章",
-    tech_p: ["前 2 月 0 手续费","创始师傅徽章","优先派单","限首批 100 名"],
+    tech_title: "0% 手续费 + 创始徽章", tech_desc: "前 2 个月 0% 手续费，加创始Provider专属徽章",
+    tech_p: ["前 2 月 0 手续费","创始Provider徽章","优先派单","限首批 100 名"],
   },
   en: {
     label: "Limited Offers", title: "Exclusive Offers for 3 Roles", sub: "Sign up now · First 1000 only",

@@ -55,7 +55,7 @@ export default function Waitlist() {
 
   const [open, setOpen] = useState(false);
   
-  // 监听全局事件，随时唤醒注册弹窗
+  // 监听全局事件，随时唤醒Register弹窗
   useEffect(() => {
     const handleOpen = () => setOpen(true);
     window.addEventListener("open-waitlist", handleOpen);
@@ -263,7 +263,7 @@ export default function Waitlist() {
     .filter(b => b.t) as { t: string; s: string }[];
 
   const ROLES: { key: Role; Icon: typeof User; label: string; sub: string }[] = [
-    { key: "customer", Icon: User,     label: c.role_customer, sub: "找服务" },
+    { key: "customer", Icon: User,     label: c.role_customer, sub: "找Services" },
     { key: "merchant", Icon: Store,    label: c.role_merchant, sub: "做生意" },
     { key: "tech",     Icon: Wrench,   label: c.role_tech,     sub: "靠技术" },
     { key: "artisan",  Icon: Sparkles, label: c.role_artisan,  sub: "靠手艺" },
@@ -464,7 +464,7 @@ export default function Waitlist() {
                         }}
                         className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-white border border-gray-200 text-gray-700 font-bold text-[14px] hover:bg-gray-50 active:scale-[0.98] transition"
                       >
-                        {l === "zh" ? "已有账号？直接登录" : l === "ms" ? "Sudah ada akaun? Log masuk" : "Already have an account? Login"}
+                        {l === "zh" ? "已有账号？直接Login" : l === "ms" ? "Sudah ada akaun? Log masuk" : "Already have an account? Login"}
                         <ArrowRight size={16} strokeWidth={2.5} />
                       </button>
 
@@ -492,8 +492,8 @@ export default function Waitlist() {
                   </motion.div>
                 )}
 
-                {/* ============ 协议同意关卡 ============ */}
-                {/* ============ 协议同意关卡 ============ */}
+                {/* ============ Terms同意关卡 ============ */}
+                {/* ============ Terms同意关卡 ============ */}
                 {!done && agreeGate && (
                   <div className="-mx-6 -mt-5">
                     <div className="relative bg-gradient-to-br from-orange-100 via-amber-50 to-orange-50 px-6 pt-8 pb-7 overflow-hidden">
@@ -516,7 +516,7 @@ export default function Waitlist() {
                             {aTerms && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">
-                            {l === "zh" ? "服务条款" : l === "ms" ? "Terma" : "Terms"}
+                            {l === "zh" ? "Services条款" : l === "ms" ? "Terma" : "Terms"}
                           </div>
                         </button>
 
@@ -526,7 +526,7 @@ export default function Waitlist() {
                             {aPrivacy && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">
-                            {l === "zh" ? "隐私政策" : l === "ms" ? "Privasi" : "Privacy"}
+                            {l === "zh" ? "Privacy政策" : l === "ms" ? "Privasi" : "Privacy"}
                           </div>
                         </button>
 
@@ -536,15 +536,15 @@ export default function Waitlist() {
                             {aRole && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">
-                            {role === "customer" ? (l === "zh" ? "用户协议" : l === "ms" ? "Pengguna" : "User") :
-                             role === "merchant" ? (l === "zh" ? "商家协议" : l === "ms" ? "Peniaga" : "Merchant") :
-                             (l === "zh" ? "师傅协议" : l === "ms" ? "Tukang" : "Pro")}
+                            {role === "customer" ? (l === "zh" ? "用户Terms" : l === "ms" ? "Pengguna" : "User") :
+                             role === "merchant" ? (l === "zh" ? "MerchantTerms" : l === "ms" ? "Peniaga" : "Merchant") :
+                             (l === "zh" ? "ProviderTerms" : l === "ms" ? "Tukang" : "Pro")}
                           </div>
                         </button>
                       </div>
 
                       <div className="text-center text-[12px] text-gray-500 leading-relaxed">
-                        {l === "zh" ? "点击上方协议阅读全文，须滑到底部才能同意" :
+                        {l === "zh" ? "点击上方Terms阅读全文，须滑到底部才能同意" :
                          l === "ms" ? "Ketik perjanjian untuk baca penuh, tatal ke bawah untuk setuju" :
                          "Tap an agreement above to read, scroll to bottom to agree"}
                       </div>
@@ -589,17 +589,17 @@ export default function Waitlist() {
                   </div>
                 )}
 
-                {/* ============ 协议预览弹窗 ============ */}
+                {/* ============ Terms预览弹窗 ============ */}
                 {previewOpen && (
                   <div className="fixed inset-0 z-[300] flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-md" data-lenis-prevent="true" onClick={() => setPreviewOpen(null)}>
                     <div className="relative w-full max-w-lg h-[88vh] flex flex-col rounded-3xl bg-white shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
                       <div className="shrink-0 px-5 py-4 border-b border-gray-100 flex items-center justify-between bg-white">
                         <div className="text-[15px] font-black text-gray-900">
-                          {previewOpen === "terms" ? (l === "zh" ? "《服务条款》" : l === "ms" ? "Terma Perkhidmatan" : "Terms of Service") :
-                           previewOpen === "privacy" ? (l === "zh" ? "《隐私政策》" : l === "ms" ? "Dasar Privasi" : "Privacy Policy") :
-                           role === "customer" ? (l === "zh" ? "《用户服务协议》" : l === "ms" ? "Perjanjian Pengguna" : "User Agreement") :
-                           role === "merchant" ? (l === "zh" ? "《商家合作协议》" : l === "ms" ? "Perjanjian Peniaga" : "Merchant Agreement") :
-                           (l === "zh" ? "《师傅合作协议》" : l === "ms" ? "Perjanjian Tukang" : "Pro Agreement")}
+                          {previewOpen === "terms" ? (l === "zh" ? "《Services条款》" : l === "ms" ? "Terma Perkhidmatan" : "Terms of Service") :
+                           previewOpen === "privacy" ? (l === "zh" ? "《Privacy政策》" : l === "ms" ? "Dasar Privasi" : "Privacy Policy") :
+                           role === "customer" ? (l === "zh" ? "《用户ServicesTerms》" : l === "ms" ? "Perjanjian Pengguna" : "User Agreement") :
+                           role === "merchant" ? (l === "zh" ? "《Merchant合作Terms》" : l === "ms" ? "Perjanjian Peniaga" : "Merchant Agreement") :
+                           (l === "zh" ? "《Provider合作Terms》" : l === "ms" ? "Perjanjian Tukang" : "Pro Agreement")}
                         </div>
                         <button onClick={() => setPreviewOpen(null)} className="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-500">
                           <X size={18} strokeWidth={2.5} />
@@ -701,7 +701,7 @@ export default function Waitlist() {
               {/* ============ Step 3：业务信息 ============ */}
                 {!done && step === 4 && (
                 <div className="space-y-5">
-                  {/* 商家 */}
+                  {/* Merchant */}
                   {role === "merchant" && (
                     <>
                       <h3 className="text-lg font-black text-gray-900">{c.sec_shop}</h3>
@@ -742,7 +742,7 @@ export default function Waitlist() {
                     </>
                   )}
 
-                  {/* 地址（商家/技术员/手艺人） */}
+                  {/* 地址（Merchant/技术员/手艺人） */}
                   {role !== "customer" && (
                     <>
                       <h3 className="text-lg font-black text-gray-900 pt-2">{c.sec_address}</h3>
@@ -784,7 +784,7 @@ export default function Waitlist() {
                     </>
                   )}
 
-                  {/* 商家服务方式 */}
+                  {/* MerchantServices方式 */}
                   {role === "merchant" && (
                     <Field label={c.serveMode}>
                       <div className="grid grid-cols-3 gap-2">

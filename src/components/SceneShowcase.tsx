@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { AlertTriangle, Sparkles, Heart, Truck, ShoppingBag, ArrowRight } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const C = {
@@ -10,7 +9,7 @@ const C = {
     label: "使用场景（示例）",
     title: "这些时候，你需要 VGO",
     scenes: [
-      { tag: "紧急维修", title: "半夜水管爆了？", desc: "拍照下单，附近认证师傅就近匹配。24 小时接单，明码标价，不会坐地起价。", cta: "立即叫师傅", img: "/scenes/burst.jpg", icon: "urgent" },
+      { tag: "紧急维修", title: "半夜水管爆了？", desc: "拍照下单，附近认证Provider就近匹配。24 小时接单，明码标价，不会坐地起价。", cta: "立即叫Provider", img: "/scenes/burst.jpg", icon: "urgent" },
       { tag: "家庭清洁", title: "周末想休息，不想打扫？", desc: "专业保洁团队上门，自带工具和清洁剂。深度清洁、开荒保洁、日常维护，一次搞定。", cta: "预约保洁", img: "/shared/s01.jpg", icon: "clean" },
       { tag: "按摩养生", title: "工作累了，想放松？", desc: "认证按摩师上门，中式推拿、泰式按摩、经络疏通。不用出门，在自己家就能享受。", cta: "预约按摩", img: "/shared/s09.jpg", icon: "massage" },
       { tag: "跑腿代购", title: "没时间买东西？", desc: "同城跑腿、代买代送、加急配送。买菜、取快递、送文件，交给靠谱的人。", cta: "找人跑腿", img: "/scenes/move.jpg", icon: "errand" },
@@ -41,7 +40,7 @@ const C = {
   },
 } as const;
 
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Record<string, any> = {
   urgent: AlertTriangle,
   clean: Sparkles,
   massage: Heart,

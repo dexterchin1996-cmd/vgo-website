@@ -8,18 +8,18 @@ import Link from "next/link";
 
 const C = {
   zh: {
-    label: "联系我们", title: "联系我们",
-    intro: "无论是合作咨询、客户支持还是意见反馈，欢迎通过以下方式联系我们。",
-    quick_t: "需要帮助？",
+    label: "Contact", title: "Contact",
+    intro: "无论是合作咨询、客户支持还是意见反馈，欢迎通过以下方式Contact。",
+    quick_t: "需要Help？",
     quick: "以下是最快的联系方式",
     dept_t: "按部门联系",
     depts: [
-      { Icon: Headphones, name: "客户支持", desc: "订单、退款、投诉、账号问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
-      { Icon: Store,      name: "商家合作", desc: "入驻申请、合作洽谈、账单问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
-      { Icon: Wrench,     name: "师傅入驻", desc: "入驻审核、接单、结算问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
+      { Icon: Headphones, name: "客户支持", desc: "Orders、退款、投诉、账号问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
+      { Icon: Store,      name: "Merchant合作", desc: "入驻申请、合作洽谈、账单问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
+      { Icon: Wrench,     name: "Provider入驻", desc: "入驻审核、接单、结算问题", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
       { Icon: Users,      name: "媒体 / 其他", desc: "媒体采访、投资合作、其他", email: "support.vgo@gmail.com", wa: "+60 11-7269 1788" },
     ],
-    hours_t: "服务时间",
+    hours_t: "Services时间",
     hours: "周一至周日 · 9:00 – 21:00（马来西亚时间）",
     reply_note: "我们会在 24 小时内回复每一条信息。",
     faq_t: "常见问题快捷入口",
@@ -67,7 +67,7 @@ const FAQ_LINKS = {
   zh: [
     <span key="what-is-vgo" id="what-is-vgo">V&apos;GO 是什么？</span>,
     "怎么下单？",
-    "师傅有认证吗？",
+    "Provider有认证吗？",
     "价格怎么算？",
   ],
   en: [
@@ -149,7 +149,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* 服务时间 */}
+      {/* Services时间 */}
       <div className="not-prose mb-10 p-6 rounded-2xl bg-[#06111d]/5 border border-white/10">
         <div className="flex items-center gap-2 mb-2">
           <Clock size={16} className="text-[var(--vgo)]" />

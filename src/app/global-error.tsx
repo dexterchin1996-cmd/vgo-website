@@ -14,14 +14,14 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html lang="zh-MY">
+    <html lang="en-MY">
       <body
         style={{
           margin: 0,
           background: "#06111d",
           color: "#ffffff",
           fontFamily:
-            'system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif',
+            'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
         }}
       >
         <main
@@ -36,7 +36,7 @@ export default function GlobalError({
           }}
         >
           <h2 style={{ fontSize: "20px", fontWeight: 700, margin: "0 0 12px" }}>
-            页面暂时无法加载 / Page temporarily unavailable
+            Page temporarily unavailable
           </h2>
           <p
             style={{
@@ -45,7 +45,7 @@ export default function GlobalError({
               margin: "0 0 28px",
             }}
           >
-            请刷新页面 / Please refresh the page
+            Please refresh the page
           </p>
           <button
             onClick={() => reset()}
@@ -60,7 +60,7 @@ export default function GlobalError({
               cursor: "pointer",
             }}
           >
-            刷新 / Refresh
+            Refresh
           </button>
         </main>
       </body>

@@ -61,7 +61,7 @@ export default function Navbar() {
                 V&apos;GO
               </span>
               <span className={`hidden sm:block text-[9px] font-semibold tracking-[0.2em] transition-colors ${scrolled ? "text-gray-400" : "text-white/60"}`}>
-                Smart. Simple. Sorted.
+                {t("nav_tagline")}
               </span>
             </div>
           </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
             <span className={`text-[10px] font-medium ${scrolled ? "text-gray-500" : "text-white/70"}`}>{t("nav_batch_badge")}</span>
           </div>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex flex-wrap items-center gap-1">
             {NAV.map((item) => {
               const cls = `px-4 py-2 rounded-lg text-sm font-semibold transition ${
                 scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
@@ -123,7 +123,7 @@ export default function Navbar() {
               <LangSwitcher scrolled={scrolled} />
             </div>
 
-            {/* 统一登录/注册入口 */}
+            {/* 统一Login/Register入口 */}
             <div
               className="relative ml-3"
               onMouseEnter={() => setOpenDrop("__auth")}

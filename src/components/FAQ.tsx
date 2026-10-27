@@ -31,7 +31,7 @@ export default function FAQ() {
           className="text-center mb-14"
         >
           <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">{t("faq_label")}</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="vgo-heading text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             {t("faq_title")}
           </h2>
         </motion.div>
@@ -50,9 +50,9 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                className="w-full flex items-center justify-between gap-4 p-5 text-left whitespace-nowrap"
               >
-                <span className="font-bold text-white text-sm sm:text-base">{f.q}</span>
+                <span className="font-bold text-white text-sm sm:text-base whitespace-nowrap">{f.q}</span>
                 <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
                   open === i ? "bg-[var(--vgo)] text-white rotate-45" : "bg-white/5 text-white/60"
                 }`}>+</span>

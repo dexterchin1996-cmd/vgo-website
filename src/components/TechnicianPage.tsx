@@ -1,5 +1,4 @@
 "use client";
-import OnboardingForm from "./OnboardingForm";
 import { motion } from "motion/react";
 import {
   Wrench, Zap, ShieldCheck, Clock, Wallet, Award, ArrowRight, CheckCircle2,
@@ -9,22 +8,19 @@ import { useLang } from "@/lib/i18n";
 
 const C = {
   zh: {
-    tag: "师傅入驻",
+    tag: "Provider入驻",
     hero_t: "有手艺，就有单",
-    hero_s: "零成本入驻，就近派单，按单结算，自己排时间。手艺人的平台，多劳多得。前 100 名师傅前 3 个月 0 平台抽成。",
+    hero_s: "低门槛入驻，就近派单，按单结算，自己排时间。手艺人的平台，多劳多得。",
     hero_cta: "立即申请入驻",
     hero_faq: "查看常见问题 →",
     benefits_t: "为什么加入 VGO",
     benefits: [
-      { Icon: Zap,         title: "就近派单",   desc: "系统按距离和技能匹配，订单主动找你" },
+      { Icon: Zap,         title: "就近派单",   desc: "系统按距离和技能匹配，Orders主动找你" },
       { Icon: ShieldCheck, title: "平台担保",   desc: "完工验收后放款，不怕客户拖欠" },
       { Icon: Clock,       title: "自己排时间", desc: "想接就接，不想接就休息，全凭自己" },
       { Icon: Wallet,      title: "按单结算",   desc: "每单完工即时记录，按周期自动入账" },
-      { Icon: TrendingUp,  title: "公平定价",   desc: "标准服务平台定价，其他服务自主报价" },
+      { Icon: TrendingUp,  title: "公平定价",   desc: "标准Services平台定价，其他Services自主报价" },
       { Icon: Award,       title: "等级成长",   desc: "接单越多、评价越好，越优先派单" },
-      { Icon: Award,       title: "阶梯抽成",   desc: "等级越高，平台抽成越低，多劳多得" },
-      { Icon: Zap,         title: "完工秒结款", desc: "客户验收后款项即时结算，不拖欠" },
-      { Icon: BarChart3,   title: "接单大厅",   desc: "附近订单实时刷新，直接抢单" },
     ],
     stats: [
       { n: "首批", l: "邀请制" },
@@ -33,37 +29,37 @@ const C = {
       { n: "1-2 天", l: "审核周期" },
     ],
     earnings_t: "收益参考",
-    earnings_sub: "以下为参考区间，实际收入取决于技能、时段、订单量",
+    earnings_sub: "以下为参考区间，实际收入取决于技能、时段、Orders量",
     earnings: [
       { n: "3-8 单",    l: "日均接单", sub: "视技能与空闲时间" },
-      { n: "RM 80-300", l: "单均收入", sub: "视服务类型" },
+      { n: "RM 80-300", l: "单均收入", sub: "视Services类型" },
       { n: "RM 7K-50K", l: "月毛收入", sub: "参考区间，非承诺" },
     ],
     support_t: "平台支持",
     support: [
-      { Icon: GraduationCap, title: "技能培训", desc: "平台提供行业规范和服务培训" },
-      { Icon: ShieldCheck,   title: "订单担保", desc: "客户先付款托管，完工后放款" },
+      { Icon: GraduationCap, title: "技能培训", desc: "平台提供行业规范和Services培训" },
+      { Icon: ShieldCheck,   title: "Orders担保", desc: "客户先付款托管，完工后放款" },
       { Icon: BarChart3,     title: "收入看板", desc: "实时查看接单量、收入、评价" },
       { Icon: Headphones,    title: "客服支持", desc: "遇纠纷由平台介入协调" },
       { Icon: Award,         title: "等级体系", desc: "接单多、评价好，优先派单" },
       { Icon: Heart,         title: "保险覆盖", desc: "平台为接单过程提供基础保障" },
     ],
-    stories_t: "师傅故事",
-    stories_sub: "来自亚庇地区的首批合作师傅（示例）",
+    stories_t: "Provider故事",
+    stories_sub: "来自亚庇地区的首批合作Provider（示例）",
     stories: [
-      { name: "亚庇 · 水电师傅",   tag: "水电维修 · 3 年经验", quote: "之前靠朋友圈发广告，接单很不稳定。上 VGO 之后，附近有需求就自动派过来，不用自己找客户。" },
-      { name: "亚庇 · 冷气师傅",   tag: "空调维修 · 5 年经验", quote: "最怕遇到拖款的客户。平台担保就放心多了，完工验收后自动打款，不用追着要钱。" },
+      { name: "亚庇 · 水电Provider",   tag: "水电维修 · 3 年经验", quote: "之前靠朋友圈发广告，接单很不稳定。上 VGO 之后，附近有需求就自动派过来，不用自己找客户。" },
+      { name: "亚庇 · 冷气Provider",   tag: "空调维修 · 5 年经验", quote: "最怕遇到拖款的客户。平台担保就放心多了，完工验收后自动打款，不用追着要钱。" },
       { name: "亚庇 · 保洁员",     tag: "家庭清洁 · 2 年经验", quote: "时间很自由，想接单就上线，想休息就下线。比在固定公司上班舒服，收入也更灵活。" },
     ],
     flow_t: "入驻流程",
     steps: [
-      { n: "01", title: "注册账号", desc: "填手机号、设密码，完成实名认证", time: "5 分钟" },
+      { n: "01", title: "Register账号", desc: "填手机号、设密码，完成实名认证", time: "5 分钟" },
       { n: "02", title: "提交资质", desc: "上传技能证、身份证、工作照片", time: "10 分钟" },
       { n: "03", title: "平台审核", desc: "VGO 核验身份和技能，1-2 个工作日", time: "1-2 天" },
       { n: "04", title: "开始接单", desc: "接收就近派单，或主动抢单", time: "立即" },
       { n: "05", title: "完工收款", desc: "客户验收满意，按周期自动打款", time: "按周期" },
     ],
-    skills_t: "可接服务类型",
+    skills_t: "可接Services类型",
     skills: [
       "水电维修", "空调维修", "家电维修", "门锁开锁",
       "清洁保洁", "家居装修", "搬运搬家", "跑腿代购",
@@ -75,19 +71,19 @@ const C = {
       "专业技能证书（如有）",
       "银行账户（收款用）",
       "个人照片 + 工作照",
-      "无犯罪记录证明（部分服务需）",
+      "无犯罪记录证明（部分Services需）",
       "健康证明（美容、按摩类需）",
     ],
     faq_t: "常见问题",
     faqs: [
-      ["没有证书可以入驻吗？", "部分服务类目不强制要求证书，如搬运、跑腿、基础清洁。但涉及水电、空调、医疗类等高技能服务，需要提供相关技能证明。具体要求欢迎联系客服咨询。"],
-      ["平台抽成多少？", "VGO 对每单收取一定比例的平台服务费，具体费率在入驻前会明确告知。标准服务按平台定价，其他服务由你自主报价。所有费用透明，没有隐藏收费。"],
-      ["多久能拿到钱？", "订单完成、客户验收后，款项按平台约定的结算周期自动打入你的银行账户。具体周期以入驻协议为准。"],
-      ["客户不付款怎么办？", "VGO 平台提供订单担保。所有通过平台的订单，客户付款会先进入平台托管，完工验收后才会放款给你。客户无法直接拖欠。"],
-      ["可以指定服务区域吗？", "可以。你可以在后台设置自己的服务范围和可接单时段。系统只会派送范围内的订单给你。"],
+      ["没有证书可以入驻吗？", "部分Services类目不强制要求证书，如搬运、跑腿、基础清洁。但涉及水电、空调、医疗类等高技能Services，需要提供相关技能证明。具体要求欢迎联系客服咨询。"],
+      ["平台抽成多少？", "VGO 对每单收取一定比例的平台Services费，具体费率在入驻前会明确告知。标准Services按平台定价，其他Services由你自主报价。所有费用透明，没有隐藏收费。"],
+      ["多久能拿到钱？", "Orders完成、客户验收后，款项按平台约定的结算周期自动打入你的银行账户。具体周期以入驻Terms为准。"],
+      ["客户不付款怎么办？", "VGO 平台提供Orders担保。所有通过平台的Orders，客户付款会先进入平台托管，完工验收后才会放款给你。客户无法直接拖欠。"],
+      ["可以指定Services区域吗？", "可以。你可以在后台Settings自己的Services范围和可接单时段。系统只会派送范围内的Orders给你。"],
       ["每天必须接单吗？", "不必须。你完全自主决定接单时间和数量。想多赚就多接，想休息就下线。平台不会强制派单。"],
-      ["被客户投诉怎么办？", "如遇投诉，平台会核实情况。如果确实是服务问题，会按平台规则处理。如果是误会，会协助双方沟通解决。所有订单记录在平台留档。"],
-      ["可以同时做多种服务吗？", "可以。你可以同时提供多种技能服务（如水电 + 清洁），只要通过对应的资质审核。"],
+      ["被客户投诉怎么办？", "如遇投诉，平台会核实情况。如果确实是Services问题，会按平台规则处理。如果是误会，会协助双方沟通解决。所有Orders记录在平台留档。"],
+      ["可以同时做多种Services吗？", "可以。你可以同时提供多种技能Services（如水电 + 清洁），只要通过对应的资质审核。"],
     ],
     cta_t: "准备好接单了吗？",
     cta_s: "提交申请，VGO 团队会在 1-2 个工作日内联系你。",
@@ -270,7 +266,7 @@ export default function TechnicianPage() {
     <main className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
       <section className="relative min-h-[70svh] flex items-center justify-center px-5 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504953790623-798d7979a7d3?w=1600&q=80')" }} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/shared/s02.jpg')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-gray-950" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center pt-24">
@@ -365,7 +361,7 @@ export default function TechnicianPage() {
             <motion.div key={st.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative p-6 rounded-3xl bg-white/5 border border-white/10">
               <Quote size={36} strokeWidth={1} className="absolute top-3 right-3 text-[var(--vgo)] opacity-10" />
-              <p className="text-sm text-white/75 leading-[1.8] mb-5">&quot;{st.quote}&quot;</p>
+              <p className="text-sm text-white/75 leading-[1.8] mb-5">"{st.quote}"</p>
               <div className="pt-4 border-t border-white/10 flex items-center gap-2">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center text-xs font-black shrink-0">{st.name[0]}</div>
                 <div className="min-w-0">
@@ -451,16 +447,13 @@ export default function TechnicianPage() {
           <div className="relative">
             <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{c.cta_t}</h2>
             <p className="text-sm text-white/85 mb-8 max-w-md mx-auto">{c.cta_s}</p>
-            <a href="https://tech.vgoservice.com/register" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="mailto:support.vgo@gmail.com" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {c.cta_btn} <ArrowRight size={18} />
             </a>
             <p className="text-xs text-white/60 mt-4">{c.cta_note}</p>
           </div>
         </motion.div>
       </section>
-
-      <OnboardingForm />
-
     </main>
   );
 }

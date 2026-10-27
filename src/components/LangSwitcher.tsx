@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from "motion/react";
 import { Globe, Check } from "lucide-react";
 import { useLang, Lang } from "@/lib/i18n";
 
-const LANGS: { code: Lang; label: string; native: string }[] = [
-  { code: "zh", label: "中文", native: "简体中文" },
-  { code: "en", label: "English", native: "English" },
-  { code: "ms", label: "Bahasa Melayu", native: "Bahasa Melayu" },
+const LANGS: { code: Lang; labelKey: string; nativeKey: string }[] = [
+  { code: "zh", labelKey: "lang_zh", nativeKey: "lang_zh_native" },
+  { code: "en", labelKey: "lang_en", nativeKey: "lang_en_native" },
+  { code: "ms", labelKey: "lang_ms", nativeKey: "lang_ms_native" },
 ];
 
 export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean }) {
-  const { lang, setLang } = useLang();
+  const { lang, setLang, t } = useLang();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -24,7 +24,6 @@ export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean 
   }, []);
 
   const current = LANGS.find((l) => l.code === lang);
-
   return (
     <div ref={ref} className="relative">
       <button
@@ -59,8 +58,8 @@ export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean 
                 className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 transition"
               >
                 <span className="flex flex-col items-start">
-                  <span className="font-semibold text-gray-900">{l.label}</span>
-                  <span className="text-[10px] text-gray-400">{l.native}</span>
+                  <span className="font-semibold text-gray-900">{t(l.labelKey)}</span>
+                  <span className="text-[10px] text-gray-400">{t(l.nativeKey)}</span>
                 </span>
                 {lang === l.code && <Check size={16} className="text-[var(--vgo)]" />}
               </button>

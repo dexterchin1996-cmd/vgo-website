@@ -11,7 +11,7 @@ const C = {
   zh: {
     tag: "师傅入驻",
     hero_t: "有手艺，就有单",
-    hero_s: "零成本入驻，就近派单，按单结算，自己排时间。手艺人的平台，多劳多得。",
+    hero_s: "零成本入驻，就近派单，按单结算，自己排时间。手艺人的平台，多劳多得。前 100 名师傅前 3 个月 0 平台抽成。",
     hero_cta: "立即申请入驻",
     hero_faq: "查看常见问题 →",
     benefits_t: "为什么加入 VGO",
@@ -270,7 +270,7 @@ export default function TechnicianPage() {
     <main className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
       <section className="relative min-h-[70svh] flex items-center justify-center px-5 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/shared/s02.jpg')" }} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504953790623-798d7979a7d3?w=1600&q=80')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-gray-950" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center pt-24">

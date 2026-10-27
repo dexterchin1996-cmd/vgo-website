@@ -14,7 +14,7 @@ export default function Roles() {
       points: [t("role_customer_p1"), t("role_customer_p2"), t("role_customer_p3"), t("role_customer_p4")],
       cta: t("role_customer_cta"),
       href: "/customer",
-      img: "/shared/s03.jpg",
+      img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=600&q=80",
     },
     {
       id: "merchant", tag: t("role_merchant_tag"), Icon: Store,
@@ -23,7 +23,7 @@ export default function Roles() {
       points: [t("role_merchant_p1"), t("role_merchant_p2"), t("role_merchant_p3"), t("role_merchant_p4")],
       cta: t("role_merchant_cta"),
       href: "/merchant",
-      img: "/shared/s06.jpg",
+      img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=600&q=80",
     },
     {
       id: "technician", tag: t("role_tech_tag"), Icon: Wrench,
@@ -32,7 +32,7 @@ export default function Roles() {
       points: [t("role_tech_p1"), t("role_tech_p2"), t("role_tech_p3"), t("role_tech_p4")],
       cta: t("role_tech_cta"),
       href: "/technician",
-      img: "/shared/s02.jpg",
+      img: "https://images.unsplash.com/photo-1504953790623-798d7979a7d3?w=600&q=80",
     },
     {
       id: "partner", tag: t("role_partner_tag"), Icon: Handshake,

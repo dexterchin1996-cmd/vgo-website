@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, FileText } from "lucide-react";
+import { ArrowLeft, FileText, Check } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export default function LegalShell({
@@ -43,7 +43,7 @@ export default function LegalShell({
           {version && (
             <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono">
               <span className="px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 font-bold">{version}</span>
-              <span className="px-2.5 py-1 rounded-full bg-green-50 text-green-700 font-bold">✓ 法律有效</span>
+              <span className="px-2.5 py-1 rounded-full bg-green-50 text-green-700 font-bold"><Check size={14} strokeWidth={2} className="mr-1" /> 法律有效</span>
             </div>
           )}
         </header>

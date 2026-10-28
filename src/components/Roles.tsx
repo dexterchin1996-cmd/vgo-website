@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { User, Store, Wrench, Handshake } from "lucide-react";
+import { User, Store, Wrench, Handshake, Check } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export default function Roles() {
@@ -98,7 +98,7 @@ export default function Roles() {
                   <div className="flex flex-wrap gap-2 mb-6">
                     {r.points.map((pt) => (
                       <span key={pt} className="px-3 py-1.5 rounded-full bg-[#06111d] border border-white/10 text-xs font-semibold text-white/80">
-                        ✓ {pt}
+                        <Check size={14} strokeWidth={2} className="mr-1" />{pt}
                       </span>
                     ))}
                   </div>

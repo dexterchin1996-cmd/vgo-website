@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { Gift } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export default function FinalCTA() {
@@ -24,7 +25,7 @@ export default function FinalCTA() {
 
           <div className="relative">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#06111d]/20 backdrop-blur-md border border-white/10 text-white text-xs sm:text-sm font-bold mb-5">
-              <span className="text-lg">🎁</span>
+              <Gift size={20} strokeWidth={2} />
               <span>{t("cta_voucher_banner")}</span>
             </div>
 

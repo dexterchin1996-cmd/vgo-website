@@ -7,6 +7,7 @@ import {
   FileText, LayoutGrid, Bell,
   UserCheck, Zap, Home,
   XCircle, CheckCircle2,
+  Star,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
@@ -347,7 +348,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           {REVIEWS[lang].map((rv, i) => (
             <motion.div key={rv.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10">
               <div className="flex items-center gap-1 mb-4 text-[#FFB800]">
-                {"★★★★★".split("").map((_, j) => <span key={j}>★</span>)}
+                {[1,2,3,4,5].map((_, j) => <Star key={j} size={14} strokeWidth={2} className="mr-0.5" />)}
               </div>
               <p className="text-sm text-white/75 leading-relaxed mb-5">&quot;{rv.quote}&quot;</p>
               <div className="pt-4 border-t border-white/10">

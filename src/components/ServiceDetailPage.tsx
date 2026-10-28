@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import {
   ArrowLeft, ArrowRight, Check, Clock, ShieldCheck, XCircle,
-  Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase,
+  Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase, Star,
   type LucideIcon,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
@@ -316,7 +316,7 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold text-white">预订此Services</h3>
               <div className="flex items-center gap-1 text-[12px] text-white/70">
-                <span className="text-[#FF7A00]">★</span> 4.9
+                <Star size={14} strokeWidth={2} className="mr-1 text-[#FF7A00]"/> 4.9
               </div>
             </div>
             

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import {
   X, User, Store, Wrench, Sparkles, CheckCircle2, ArrowRight, ArrowLeft,
-  Loader2, ChevronDown, AlertCircle, Gift, ShieldCheck,
+  Loader2, ChevronDown, AlertCircle, Gift, ShieldCheck, Check, Lock, AlertTriangle,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import {
@@ -380,9 +380,9 @@ export default function Waitlist() {
                                         </div>
                     
                                         <div className="p-3 rounded-2xl bg-amber-50 border border-amber-100 mb-5 text-[11px] text-amber-800 leading-relaxed">
-                                          ⚠️ 没收到？检查垃圾邮件箱，或{" "}
+                                          <AlertTriangle size={14} strokeWidth={2} className="mr-1" /> 没收到？检查垃圾邮件箱，或{" "}
                                           <button onClick={resend} disabled={resending} className="underline font-black text-amber-900">
-                                            {resending ? "发送中…" : resendDone ? "已重发 ✓" : "点击重发"}
+                                            {resending ? "发送中…" : resendDone ? <><Check size={14} strokeWidth={2} className="mr-1" />已重发</> : "点击重发"}
                                           </button>
                                         </div>
                     
@@ -550,9 +550,9 @@ export default function Waitlist() {
                       </div>
 
                       <div className="flex items-center justify-center gap-3 text-[10px] font-bold text-gray-400 tracking-wider">
-                        <span>🔒 SSL</span>
+                        <Lock size={14} strokeWidth={2} className="mr-1" /> SSL
                         <span className="opacity-40">·</span>
-                        <span>✓ 法律有效</span>
+                        <Check size={14} strokeWidth={2} className="mr-1" /> 法律有效
                         <span className="opacity-40">·</span>
                         <span>PDPA 合规</span>
                       </div>

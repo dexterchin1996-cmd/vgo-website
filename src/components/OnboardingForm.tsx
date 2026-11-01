@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, User, Phone, FileText, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgo.abrdns.com";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgoservice.com";
 
 export default function OnboardingForm() {
   const { t } = useLang();

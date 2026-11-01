@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLang } from "@/lib/i18n";
 import { COVERAGE_CITIES, COVERAGE_LABELS } from "@/data/coverage";
 import { Mail, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgo.abrdns.com";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgoservice.com";
 export default function CoverageSection() {
   const { lang } = useLang();
   const cl = COVERAGE_LABELS[lang] ?? COVERAGE_LABELS.zh;

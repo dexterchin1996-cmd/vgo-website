@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS=--max-old-space-size=1024 next dev -p 5000",
     "build": "next build",
-    "start": "next start -p 5000",
+    "start": "node scripts/serve-static.mjs 3002",
     "lint": "eslint src",
     "build:cf": "npx opennextjs-cloudflare build",
     "deploy": "npx opennextjs-cloudflare deploy"

@@ -15,7 +15,7 @@ import {
 
 type Role = "customer" | "merchant" | "tech" | "artisan";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgo.abrdns.com";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://vgoservice.com";
 
 const ROLE_MAP: Record<string, Role> = {
   "#download": "customer",

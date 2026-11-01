@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "V'GO",
-  domain: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+  domain: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   contact: {
     whatsapp: 'https://wa.me/601172691788',
     email: 'hello@vgo.com.my',

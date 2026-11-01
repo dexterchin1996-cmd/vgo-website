@@ -229,7 +229,7 @@
 
 ### T43 数据不一致（2026-10-19 登记）
 
-- site.config.ts 的 contact.email 为 hello@vgo.com.my
+- site.config.ts 的 contact.email 为 hello@vgoservice.com
 - layout.tsx jsonLd 与 README 记录为 support.vgo@gmail.com
 - 两者不一致，site.config.ts 为死数据，未在任何页面使用
 - 风险：将来误引用会导致联系方式错误

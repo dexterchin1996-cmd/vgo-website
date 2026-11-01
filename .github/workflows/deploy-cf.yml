@@ -1,7 +1,7 @@
 name: Deploy Website to Cloudflare
 on:
   push:
-    branches: [website-upgrade-2026-10]
+    branches: [main]
   workflow_dispatch:
 jobs:
   deploy:
